@@ -1,19 +1,30 @@
-/* CSS declarations go here */
-
-li:hover {
-    background: steelblue;
-}/* CSS declarations go here */
-
-
+/*************************
+Splash Page CSS
+*************************/
 ul {
-    list-style: none;
+	list-style: none;
 }
 
-p {
-    margin: auto;
-    width: 50%;
+li:hover {
+  background: steelblue;
+}
+
+
+.title {
+	color: #222;
+	font-family: 'Droid Sans', sans-serif;
 }
 
 .noted {
-    background: pink;
+  background: pink;
+}
+
+/*************************
+Book CSS
+*************************/
+p {
+	color: purple;
+  font-family: 'Droid Sans', sans-serif;
+  margin: auto;
+  width: 50%;
 }
