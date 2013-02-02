@@ -11,6 +11,7 @@ var url = "https://api.pearson.com/penguin/classics/v1/books?"
     Books.find().fetch().length > 1 ||  Meteor.http.get(url, function (err, result) {
       result.data.books.forEach(function (book, i) { 
         book.text = [];
+        book.notes = [];
         var id = Books.insert(book)
         Meteor.setTimeout(function ()  {
           Meteor.http.get(book.url, function (err, result) {

@@ -25,12 +25,10 @@
 <template name="viewer">
   <a href="/">Click here to go back</a>
   {{#each book}}
-  <p {{#if noted}}
-     class="noted"
-     {{/if}} >
+  <p {{#if is_noted}} class="noted" {{/if}}>
     {{text}}
   </p>
-  </br>
+  <br/>
   {{/each}}
 
   {{#each notes}}
