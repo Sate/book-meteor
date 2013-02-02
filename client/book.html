@@ -7,7 +7,23 @@
 </body>
 
 <template name="hello">
-  <h1>Hello World!</h1>
-  {{greeting}}
-  <input type="button" value="Click" />
+  {{#if route}}
+  {{> splash}}
+  {{^}}
+  {{> book}}
+  {{/if}}
+</template>
+
+<template name="splash">
+  <ul>
+  {{#each book}}
+  <li>{{title}}</li>
+  {{/each}}
+  </ul>
+</template>
+
+<template name="book">
+  {{#each book}}
+  {{x}}
+  {{/each}}
 </template>
