@@ -24,7 +24,13 @@
 
 <template name="viewer">
   {{#each book}}
-  <p {{#if noted}}} className="noted" {{/if}}}>{{text}}</p>
+  <{#if noted}}} className="noted" {{/if}}}>{{text}}</p>
   </br>
+  {{/each}}
+
+  {{#each notes}}
+  <div class="note" style="top:{{top}}">
+    {{text}}
+  </div>
   {{/each}}
 </template>
