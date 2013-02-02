@@ -1,8 +1,14 @@
 var url = "https://api.pearson.com/penguin/classics/v1/books?"
       + "apikey=d5df23ffde529d41f3418a80ec6eca25&limit=100"
-
   Meteor.startup(function () {
-    Books.find().fetch().length < 48 && Meteor.http.get(url, function (err, result) {
+    Meteor.setTimeout(function () {
+      //no text...
+      Books.remove({
+        title: "The Private Memoirs and Confessions of a Justified Sinner"
+      })
+    }, 1000 * 60 * 5)
+
+    Books.find().fetch().length > 1 ||  Meteor.http.get(url, function (err, result) {
       result.data.books.forEach(function (book, i) { 
         book.text = [];
         var id = Books.insert(book)
