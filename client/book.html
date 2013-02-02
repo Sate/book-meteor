@@ -4,9 +4,29 @@
 </head>
 
 <body>
+  <img src="scroll.jpg" class="scroll">
+  {{> about}}
   {{> hello}}
-  <img src="scroll.jpg">
 </body>
+
+<template name="about">
+  <div class="about-div">
+    <h1>MOOCS</h1>
+    <p>Massive online open courses like Coursera, Khan Academy, and edX are gaining popularity. These programs are backed by MIT, Harvard, Stanford, and other leading universities.</p>
+  </div>
+  <div class="about-div">
+    <h1>Let's Discuss Our Reading!</h1>
+    <p>
+      Breadcrumbs allow you to discuss sections of online reading with large amounts of people.
+      <br>
+      We've solved the problem of 'now we're going to discuss what we've read'.
+    </p>
+  </div>
+  <div>
+    <h1 class="about-div">End</h1>
+    <p>sadasda</p>
+  </div>
+</template>
 
 <template name="hello">
   {{#if route}}
