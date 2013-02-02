@@ -10,7 +10,7 @@
   {{#if route}}
   {{> splash}}
   {{^}}
-  {{> book}}
+  {{> viewer}}
   {{/if}}
 </template>
 
@@ -22,8 +22,9 @@
   </ul>
 </template>
 
-<template name="book">
+<template name="viewer">
   {{#each book}}
-  <p>{{.}}</p>
+  <p {{#if noted}}} className="noted" {{/if}}}>{{text}}</p>
+  </br>
   {{/each}}
 </template>

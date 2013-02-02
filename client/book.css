@@ -3,3 +3,17 @@
 li:hover {
     background: steelblue;
 }/* CSS declarations go here */
+
+
+ul {
+    list-style: none;
+}
+
+p {
+    margin: auto;
+    width: 50%;
+}
+
+.noted {
+    background: pink;
+}
