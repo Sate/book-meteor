@@ -43,11 +43,21 @@ Template.viewer.book = function () {
   return result;
 }
 
+Template.viewer.notes = function () {
+  return Notes.find({
+    title: Session.get('view')
+  })
+}
+
 Template.viewer.events({
+  'click a': function (e) {
+    e.preventDefault();
+    Session.set('view','')
+  },
   'mouseup p': function (e) {
     if (! window.getSelection().toString()) return ;
     var i = $('body').children().index($(e.target))
-    var q = {i:i, book: this.title};
+    var q = { i:i, book: this.title };
     if (e.target.className.match(/noted/)) log(Notes.findOne(q).text)
     else Notes.insert({
       book: this.title,

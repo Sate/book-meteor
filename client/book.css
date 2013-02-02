@@ -17,3 +17,7 @@ p {
 .noted {
     background: pink;
 }
+
+.note {
+    position: absolute;
+}
