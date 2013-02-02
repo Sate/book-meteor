@@ -1,9 +1,11 @@
 <head>
   <title>book</title>
+  <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
   {{> hello}}
+  <img src="scroll.jpg">
 </body>
 
 <template name="hello">
@@ -17,7 +19,7 @@
 <template name="splash">
   <ul>
   {{#each book}}
-  <li>{{title}}</li>
+  <li class="title">{{title}}</li>
   {{/each}}
   </ul>
 </template>
