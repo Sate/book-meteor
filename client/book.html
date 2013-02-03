@@ -4,20 +4,38 @@
 </head>
 
 <body>
-  {{> about}}
-  {{> hello}}
+ {{> hello}}
 </body>
+
+<template name="scroll">
+  <div id="main">
+  <div class="books-main">
+    <div class="books-wrapper">
+      <div class="books"></div>
+      <div class="books"></div>
+      <div class="books"></div>
+      <div class="books"></div>
+      <div class="books"></div>
+      <div class="books"></div>
+      <div class="books"></div>
+      <div class="books"></div>
+    </div>
+  </div>
+  <div class="books-fade"></div>
+</div>
+</template>
+
 
 <template name="about">
   <div class="container">
     <div class="about">
       <div class="about-div">
         <h1 class="title">MOOCs</h1>
-        <p><span class="bold">M</span>assive <span class="bold">o</span>nline <span class="bold">o</span>pen <span class="bold">c</span>ourses like Coursera, Khan Academy, and edX are gaining popularity. MOOCs are backed by MIT, Harvard, Stanford, and other leading universities.</p>
+        <p class="test"><span class="bold">M</span>assive <span class="bold">o</span>nline <span class="bold">o</span>pen <span class="bold">c</span>ourses like Coursera, Khan Academy, and edX are gaining popularity. MOOCs are backed by MIT, Harvard, Stanford, and other leading universities.</p>
       </div>
       <div class="about-div">
         <h1 class="title">Let's Discuss Our Reading!</h1>
-        <p>
+        <p class="test">
           Breadcrumbs allow you to discuss sections of online reading with large amounts of people.
           <br>
           We've solved the problem of 'now we're going to discuss what we've read'.
@@ -36,6 +54,8 @@
 </template>
 
 <template name="splash">
+  {{> scroll}}
+  {{> about}}
   <ul>
   {{#each book}}
   <li class="title">{{title}}</li>
