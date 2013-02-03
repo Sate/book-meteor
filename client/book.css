@@ -3,18 +3,13 @@ Splash Page Format
 *************************/
 ul {
 	list-style: none;
+  display: none;
 }
 
 li:hover {
   background: steelblue;
 }
 
-
-.title {
-	color: #222;
-	font-family: 'Droid Sans', sans-serif;
-	background-color: red;
-}
 
 .noted {
   background: pink;
@@ -31,37 +26,53 @@ li:hover {
 Splash Image
 *************************/
 .scroll {
-	height: 500px;
+  height: 500px;
 }
 
 /*************************
 Splash Image
 *************************/
+
+.title {
+	color: #FFF;
+	font-family: 'Droid Sans', sans-serif;
+}
+
 .about-div {
-	background-color: orange;
 	text-align: center;
 	width: 400px;
 	float: left;
 }
 
+.about-div p {
+  margin: auto;
+}
+
 .about {
 	overflow: hidden;
 	width: 800px;
-	margin: auto 0;
+	margin: auto;
 	text-align: center;
 }
 
 .container {
+  position: fixed;
+  color: #FFF;
   margin: 0 auto;
 	text-align: center;
-	width: 800px;
+  width: 100%;
+  height: 100%;
 }
 
 .bold {
 	font-weight: bold;
 }
 
-/*@-moz-keyframes scroll{0%{-moz-transform:translate3d(0, 0, 0);
+.title, .about-div, .about, .container {
+  z-index: 10000;
+}
+
+@-moz-keyframes scroll{0%{-moz-transform:translate3d(0, 0, 0);
     transform:translate3d(0, 0, 0)}100%{-moz-transform:translate3d(0, -4000px, 0);
     transform:translate3d(0, -4000px, 0)}}
   @-webkit-keyframes scroll{0%{-webkit-transform:translate3d(0, 0, 0);
@@ -75,9 +86,10 @@ Splash Image
     transform:translate3d(0, -4000px, 0)}}
   @keyframes scroll{0%{transform:translate3d(0, 0, 0)}100%{transform:translate3d(0, -4000px, 0)}}
   .books{
-    background:url(../scrollx.jpg)repeat 0 0;
+    background:url(../scroll.jpg)repeat 0 0;
     width: 5059px;
     height: 800px;
+    z-index: -1;
   }
 
   #main{
@@ -129,21 +141,14 @@ Splash Image
     position: absolute;
   width: 100%;
   height: 100%;
-<<<<<<< HEAD
-  background:-webkit-gradient(linear, 0% 0%, 50% 100%, color-stop(0%, rgba(0,0,0,0.9)), color-stop(95%, rgba(0,0,0,0)), color-stop(100%, rgba(0,0,0,0.5)));
-  }*/
-=======
   background: -webkit-gradient(linear, 53% 1%, 51% 101%, color-stop(0%, rgba(0,0,0,0.2)), color-stop(93%, rgba(0,0,0,0)), color-stop(100%, rgba(0,0,0,0.7)));
   }
->>>>>>> b04d48904dc75ad057d17196d331d2f45fbae3cd
-
 /*************************
 Book CSS
-*************************/
+************************
   p.test {
-  	color: purple;
     font-family: 'Droid Sans', sans-serif;
     margin: auto;
     width: 98%;
-    background-color: blue;
+    max-width: 83%;
   }

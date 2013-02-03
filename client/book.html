@@ -65,13 +65,13 @@
 
 <template name="viewer">
   <a href="/">Click here to go back</a>
-  
-    {{#each notes}}
-    <div class="note">{{text}}</div>
-    {{/each}}
 
-    {{#each book}}
-    <p {{#if is_noted}} class="noted" {{/if}}>{{text}}</p>
-    {{/each}}
-  
+  {{#each notes}}
+  <div class="note" style="top:{{top}}px">{{text}}</div>
+  {{/each}}
+
+  {{#each book}}
+  <p {{#if is_noted}} class="noted" {{/if}}>{{text}}</p>
+  <br/>
+  {{/each}}
 </template>
