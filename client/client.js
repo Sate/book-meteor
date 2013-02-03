@@ -61,6 +61,12 @@ Template.viewer.book = function () {
   return result;
 }
 
+Template.splashPage.events({
+  'click .button': function(e){
+    Session.set("view", "Moby-Dick");
+  }
+})
+
 Template.viewer.events({
   'click a': function (e) {
     e.preventDefault();
