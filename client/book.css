@@ -65,6 +65,7 @@ h2 {
  border: 0;
  border-radius: 0;
  height: 34px;
+ font-family: 'Droid Sans', sans-serif;
 }
 
 .psize {
@@ -100,6 +101,7 @@ h2 {
 
 label {
   font-size: 1.4em;
+  margin-right: 10px;
 }
 
 /***********************
