@@ -41,8 +41,8 @@ Splash Image
 	background-color: orange;
 	text-align: center;
 	width: 400px;
-/*	float: left;
-*/}
+	float: left;
+}
 
 .about {
 	overflow: hidden;
@@ -52,15 +52,16 @@ Splash Image
 }
 
 .container {
+  margin: 0 auto;
 	text-align: center;
-	width: 1000px;
+	width: 800px;
 }
 
 .bold {
 	font-weight: bold;
 }
 
-@-moz-keyframes scroll{0%{-moz-transform:translate3d(0, 0, 0);
+/*@-moz-keyframes scroll{0%{-moz-transform:translate3d(0, 0, 0);
     transform:translate3d(0, 0, 0)}100%{-moz-transform:translate3d(0, -4000px, 0);
     transform:translate3d(0, -4000px, 0)}}
   @-webkit-keyframes scroll{0%{-webkit-transform:translate3d(0, 0, 0);
@@ -74,7 +75,7 @@ Splash Image
     transform:translate3d(0, -4000px, 0)}}
   @keyframes scroll{0%{transform:translate3d(0, 0, 0)}100%{transform:translate3d(0, -4000px, 0)}}
   .books{
-    background:url(../scroll.jpg)repeat 0 0;
+    background:url(../scrollx.jpg)repeat 0 0;
     width: 5059px;
     height: 800px;
   }
@@ -129,7 +130,7 @@ Splash Image
   width: 100%;
   height: 100%;
   background:-webkit-gradient(linear, 0% 0%, 50% 100%, color-stop(0%, rgba(0,0,0,0.9)), color-stop(95%, rgba(0,0,0,0)), color-stop(100%, rgba(0,0,0,0.5)));
-  }
+  }*/
 
 /*************************
 Book CSS
