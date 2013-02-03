@@ -13,6 +13,7 @@ li:hover {
 .title {
 	color: #222;
 	font-family: 'Droid Sans', sans-serif;
+	background-color: red;
 }
 
 .noted {
@@ -32,10 +33,25 @@ Splash Image
 .about-div {
 	background-color: orange;
 	text-align: center;
+	width: 400px;
+/*	float: left;
+*/}
+
+.about {
+	overflow: hidden;
+	width: 800px;
+	margin: auto 0;
+	text-align: center;
 }
 
+.container {
+	text-align: center;
+	width: 1000px;
+}
 
-
+.bold {
+	font-weight: bold;
+}
 
 /*************************
 Book CSS
@@ -44,5 +60,6 @@ p {
 	color: purple;
   font-family: 'Droid Sans', sans-serif;
   margin: auto;
-  width: 50%;
+  width: 98%;
+  background-color: blue;
 }

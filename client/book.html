@@ -1,30 +1,29 @@
 <head>
   <title>book</title>
-  <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
-  <img src="scroll.jpg" class="scroll">
   {{> about}}
   {{> hello}}
 </body>
 
 <template name="about">
-  <div class="about-div">
-    <h1>MOOCS</h1>
-    <p>Massive online open courses like Coursera, Khan Academy, and edX are gaining popularity. These programs are backed by MIT, Harvard, Stanford, and other leading universities.</p>
-  </div>
-  <div class="about-div">
-    <h1>Let's Discuss Our Reading!</h1>
-    <p>
-      Breadcrumbs allow you to discuss sections of online reading with large amounts of people.
-      <br>
-      We've solved the problem of 'now we're going to discuss what we've read'.
-    </p>
-  </div>
-  <div>
-    <h1 class="about-div">End</h1>
-    <p>sadasda</p>
+  <div class="container">
+    <div class="about">
+      <div class="about-div">
+        <h1 class="title">MOOCs</h1>
+        <p><span class="bold">M</span>assive <span class="bold">o</span>nline <span class="bold">o</span>pen <span class="bold">c</span>ourses like Coursera, Khan Academy, and edX are gaining popularity. MOOCs are backed by MIT, Harvard, Stanford, and other leading universities.</p>
+      </div>
+      <div class="about-div">
+        <h1 class="title">Let's Discuss Our Reading!</h1>
+        <p>
+          Breadcrumbs allow you to discuss sections of online reading with large amounts of people.
+          <br>
+          We've solved the problem of 'now we're going to discuss what we've read'.
+        </p>
+      </div>
+    </div> <!-- about -->
   </div>
 </template>
 
