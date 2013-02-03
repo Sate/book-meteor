@@ -22,13 +22,6 @@ Template.splash.book = function () {
 };
 
 
-Template.viewer.notes = function (a) {
-  return Books.findOne({title: Session.get('view')}).notes.map(function (d, i) {
-    d.top += i * 15
-    return d
-  })
-}
-
 Template.viewer.book = function () {
   var book = Books.findOne({title: Session.get('view')});
   if (!book) return;
@@ -41,9 +34,17 @@ Template.viewer.book = function () {
   })(text);
 
   result = result.map(function (d) {
+      var notes = [];
+        for (var i = 0; i<book.notes.length; i++){
+          if (book.notes[i].pid === result.indexOf(d)){
+            notes.push(book.notes[i].text)
+          }
+        }
     return {
       text: d,
-      title: book.title
+      title: book.title,
+      pid: result.indexOf(d),
+      notes: notes
     }; 
   })
   return result;
@@ -57,7 +58,8 @@ Template.viewer.events({
 
   'mouseup p': function (e) {
     if (! window.getSelection().toString()) return ;
-    var i = $('body').children('p').index($(e.target))
+    var i = $('body').children('p').index($(e.target));
+    var pid = $(e.target).data('pid');
     var q = { i:i, title: this.title };
     if (e.target.className.match(/noted/)) log(Notes.findOne(q).text)
     else Books.update({title: Session.get('view')}, {
@@ -65,7 +67,8 @@ Template.viewer.events({
         notes: {
           text: prompt('please enter a note'),
           title: this.title,
-          top: e.target.offsetTop
+          top: e.target.offsetTop,
+          pid: pid
         }
       }
     })
