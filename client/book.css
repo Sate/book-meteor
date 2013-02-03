@@ -192,8 +192,6 @@ Book CSS
 .noted {
   background: #333;
   border-radius: 5px;
-  padding: 10px 15px 10px 15px;
-  -webkit-transform: scale(1.1);
 }
 
 /*#blah { -webkit-transition: all .2s ease-in-out; }
@@ -211,6 +209,7 @@ Book CSS
 
 p {
   padding: 5px;
+  text-indent: 30px;
 }
 
 body {
@@ -256,6 +255,7 @@ Book Title CSS
 
 .paragraphArea div [data-pid="0"], .paragraphArea div [data-pid="31"],
 .paragraphArea div [data-pid="171"], .paragraphArea div [data-pid="137"], .paragraphArea div [data-pid="154"] {
+  text-indent: 0px;
   font-size: 2.2em;
   padding: 0;
   height: 50px;
@@ -263,6 +263,7 @@ Book Title CSS
 }
 
 .paragraphArea div [data-pid="1"] {
+  text-indent: 0px;
   font-size: 1.5em;
   padding: 0;
   margin: 18px 0 32px 0;
