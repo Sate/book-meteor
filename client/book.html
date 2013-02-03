@@ -25,12 +25,17 @@
 </div>
 </template>
 
-
 <template name="splashPage">
   <div class="container">
     <div class="about">
       <h1 class="title">Bookcrumbs</h1>
       <h2>Leave crumbs and collaborate on reading assignments.</h2>
+
+      {{#if username}}
+      <span class="name">{{username}}</span>
+      {{else}}
+      <input type="text" placeholder="sign in here">
+      {{/if}}
 
       <ul class="para">
         <li>Discuss your reading material.</li>
@@ -82,7 +87,9 @@
         <div class="noteHead"><strong>Moby Dick</strong> notes</div>
         <div class="notewrap">
         {{#each THENOTES}}
-         <div class="singlenote">{{text}}-by Student1</div>
+         <div class="singlenote" style="color:{{color}}">
+           {{text}}-by {{user}}
+         </div>
         {{/each}}
       </div>
       </div>

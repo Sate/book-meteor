@@ -4,6 +4,7 @@ function log() {
 }
 
 Meteor.startup(function () {
+  Session.set('color', rand_color())
   window.history.replaceState('','','/')
   $(window).on('keydown',function (e) {
     if (e.which === 27) {
@@ -61,7 +62,20 @@ Template.viewer.book = function () {
   return result;
 }
 
+Template.splashPage.username = function () {
+  return Session.get('name');
+}
+
 Template.splashPage.events({
+  'click .name': function (e) {
+    Session.set('name','');
+  },
+  'keydown input': function (e) {
+    if (e.which === 13) {
+      e.preventDefault()
+      Session.set('name', e.target.value.trim());
+    }
+  },
   'click .button': function(e){
     Session.set("view", "Moby-Dick");
   }
@@ -82,7 +96,8 @@ Template.viewer.events({
   },
 
   'mouseup p': function (e) {
-    if (! window.getSelection().toString()) return ;
+    var s = window.getSelection();
+    if (! s.toString()) return ;
     var i = $('body').children('p').index($(e.target));
     var pid = $(e.target).data('pid');
     var q = { i:i, title: this.title };
@@ -94,6 +109,10 @@ Template.viewer.events({
           text: userText,
           title: this.title,
           top: e.target.offsetTop,
+          from:10,
+          to:20,
+          color: Session.get('color'),
+          user: Session.get('name') || 'student',
           pid: pid
         }
       }
