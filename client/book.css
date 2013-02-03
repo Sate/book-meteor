@@ -1,13 +1,3 @@
-
-.noted {
-  background: #333;
-  border-radius: 5px;
-}
-
-.note {
-    position: relative;
-}
-
 .title {
   font-size: 4.3em;
   text-shadow: 2px 2px 2px #222;
@@ -187,28 +177,48 @@ label {
   }
 /*************************
 Book CSS
-************************
-
-
-
-/***********************************************/
-.paragraphArea{
-  max-width: 500px;
-  margin-left: 13%;
-  float: left;
+************************/
+.paragraphArea div [data-pid="0"], .paragraphArea div [data-pid="31"],
+.paragraphArea div [data-pid="171"], .paragraphArea div [data-pid="137"], .paragraphArea div [data-pid="154"] {
+  font-size: 2.2em;
+  padding: 0;
 }
 
-p{
+.paragraphArea div [data-pid="1"], {
+  font-size: 1.5em;
+}
+
+.noted {
+  background: #333;
+  border-radius: 5px;
+  padding: 20px;
+  -webkit-transform: scale(1.1);
+}
+
+/*#blah { -webkit-transition: all .2s ease-in-out; }
+*/
+.note {
+  position: relative;
+}
+
+.paragraphArea {
+  max-width: 540px;
+  margin-left: 13%;
+  float: left;
+  font-size: 1.2em;
+}
+
+p {
   padding:5px;
 }
 
-body{
+body {
   background: #222;
   color: #e9fbfe;
   font-family: 'Droid Sans', sans-serif;
 }
 
-.notebar{
+.notebar {
   float: right;
   width: 400px;
   height: 90%;
@@ -218,7 +228,7 @@ body{
   border-radius: 4px;
 }
 
-.singlenote{
+.singlenote {
   border-bottom: 1px solid #e9fbfe;
   font-size: 25px;
   padding: 10px;
