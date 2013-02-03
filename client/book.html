@@ -32,15 +32,20 @@
       <h1 class="title">Bookcrumbs</h1>
       <h2>Leave crumbs and collaborate on reading assignments.</h2>
 
-      <p class="para">Online classes Coursera, Khan Academy, and edX are gaining popularity.<br>Breadcrumbs lets you to discuss online reading with large amounts of people.</p>
-
-      <p class="para">-Discuss your reading material.<br>-Use with Coursera, Khan
-      Academy, and edX!</p>
       {{#if username}}
       <span class="name">{{username}}</span>
       {{else}}
       <input type="text" placeholder="sign in here">
       {{/if}}
+
+      <ul class="para">
+        <li>Discuss your reading material.</li>
+        <li>Use with 
+          <img src="coursera.png">, 
+          <img src="khan.png">, 
+          <img src="edx.png"></li>
+      </ul>
+
       <div class="action">
         <label>Pick your class:</label>
         <select class="pick">
@@ -80,7 +85,7 @@
         {{/each}}
       </div>
       <div class="notebar">
-        <div class="noteHead"><strong>Moby Dick</strong> notes<br><p class="para2">Coursera English 1</p></div>
+        <div class="noteHead"><strong>Moby Dick</strong> notes</div>
         {{#each THENOTES}}
          <div class="singlenote">{{text}}-by Student1</div>
         {{/each}}
