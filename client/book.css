@@ -1,6 +1,12 @@
-/*************************
- Headers CSS
-*************************/
+
+.noted {
+  background: #064f5a;
+}
+
+.note {
+    position: relative;
+}
+
 .title {
   font-size: 4.3em;
   text-shadow: 2px 2px 2px #222;
