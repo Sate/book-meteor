@@ -29,6 +29,7 @@
 <template name="splashPage">
   <div class="container">
     <div class="about">
+      {{loginButtons}}
       <h1 class="title">Bookcrumbs</h1>
       <h2>Leave crumbs and collaborate on reading assignments.</h2>
 
@@ -59,11 +60,6 @@
 <template name="splash">
   {{> scroll}}
   {{> splashPage}}
-  <ul>
-  {{#each book}}
-  <li class="subtitle">{{title}}</li>
-  {{/each}}
-  </ul>
 </template>
 
 <template name="viewer">
