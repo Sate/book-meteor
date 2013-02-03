@@ -31,11 +31,6 @@
       <h1 class="title">Bookcrumbs</h1>
       <h2>Leave crumbs and collaborate on reading assignments.</h2>
 
-      {{#if username}}
-      <span class="name">{{username}}</span>
-      {{else}}
-      <input type="text" placeholder="sign in here">
-      {{/if}}
 
       <ul class="para">
         <li>Discuss your reading material.</li>
@@ -46,6 +41,11 @@
       </ul>
 
       <div class="action">
+        {{#if username}}
+        <span class="name">{{username}}</span>
+        {{else}}
+        <input class="name" type="text" placeholder="Your name">
+        {{/if}}
         <label>Pick your class:</label>
         <select class="pick">
           <option value="E1">Coursera ENG1 (Moby Dick)</option>
@@ -85,11 +85,13 @@
       </div>
       <div class="notebar">
         <div class="noteHead"><strong>Moby Dick</strong> notes</div>
+        <div class="notewrap">
         {{#each THENOTES}}
          <div class="singlenote" style="color:{{color}}">
            {{text}}-by {{user}}
          </div>
         {{/each}}
       </div>
-    </div> <!--bookContainer div -->
+      </div>
+    </div> <!-- .bookContainer div -->
 </template>
