@@ -178,15 +178,6 @@ label {
 /*************************
 Book CSS
 ************************/
-.paragraphArea div [data-pid="0"], .paragraphArea div [data-pid="31"],
-.paragraphArea div [data-pid="171"], .paragraphArea div [data-pid="137"], .paragraphArea div [data-pid="154"] {
-  font-size: 2.2em;
-  padding: 0;
-}
-
-.paragraphArea div [data-pid="1"], {
-  font-size: 1.5em;
-}
 
 .noted {
   background: #333;
@@ -236,4 +227,17 @@ body {
 
 *{
   -webkit-transition: 0.2s linear;
+}
+
+.paragraphArea div [data-pid="0"], .paragraphArea div [data-pid="31"],
+.paragraphArea div [data-pid="171"], .paragraphArea div [data-pid="137"], .paragraphArea div [data-pid="154"] {
+  font-size: 2.2em;
+  padding: 0;
+  height: 15px;
+}
+
+.paragraphArea div [data-pid="1"] {
+  font-size: 1.5em;
+  padding: 0px;
+  font-style: italic;
 }
