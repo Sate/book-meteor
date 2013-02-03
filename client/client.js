@@ -23,7 +23,7 @@ Template.splash.book = function () {
 
 Template.viewer.THENOTES = function(){
   var choice = Session.get('p');
-  var notes = Books.findOne({title: Session.get('view')}).notes;
+  var notes = Books.find({}).fetch()[0].notes;
   var result = notes.filter(function(d){
     // console.log(d);
     // console.log(choice);
@@ -34,7 +34,7 @@ Template.viewer.THENOTES = function(){
 };
 
 Template.viewer.book = function () {
-  var book = Books.findOne({title: Session.get('view')});
+  var book = Books.find().fetch()[0];
   if (!book) return;
   var text = book.text;
   var result = [];
