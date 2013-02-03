@@ -176,12 +176,6 @@ label {
 /*************************
 Book CSS
 ************************
-  p.test {
-    font-family: 'Droid Sans', sans-serif;
-    margin: auto;
-    width: 98%;
-    max-width: 83%;
-  }
 
 
 
@@ -192,11 +186,6 @@ Book CSS
   float: left;
 }
 
-body{
-  background: #333;
-  color: #e9fbfe;
-  font-family: 'Droid Sans', sans-serif;
-}
 p{
   padding:5px;
 }

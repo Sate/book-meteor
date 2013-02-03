@@ -5,7 +5,7 @@
 }
 
 body{
-  background: #333;
+  background: #222;
   color: #e9fbfe;
   font-family: 'Droid Sans', sans-serif;
 }
@@ -20,7 +20,7 @@ p{
   border: 1px solid #e9fbfe;
   right: 10px;
   position: fixed;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .singlenote{
