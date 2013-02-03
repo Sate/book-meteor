@@ -61,7 +61,20 @@ Template.viewer.book = function () {
   return result;
 }
 
+Template.splashPage.username = function () {
+  return Session.get('name');
+}
+
 Template.splashPage.events({
+  'click .name': function (e) {
+    Session.set('name','');
+  },
+  'keydown input': function (e) {
+    if (e.which === 13) {
+      e.preventDefault()
+      Session.set('name', e.target.value.trim());
+    }
+  },
   'click .button': function(e){
     Session.set("view", "Moby-Dick");
   }
