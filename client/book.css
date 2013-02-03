@@ -42,15 +42,23 @@ Splash Image
 	text-align: center;
 	width: 400px;
 	float: left;
+  background-color: #222;
+  opacity: 0.9;
+  border-radius: 5px;
+}
+
+.about-div:nth-child(2) {
+  margin-left: 20px;
 }
 
 .about-div p {
   margin: auto;
+  max-width: 83%;
 }
 
 .about {
 	overflow: hidden;
-	width: 800px;
+	width: 820px;
 	margin: auto;
 	text-align: center;
 }
