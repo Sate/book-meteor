@@ -1,6 +1,7 @@
 
 .noted {
-  background: #064f5a;
+  background: #333;
+  border-radius: 5px;
 }
 
 .note {
@@ -214,7 +215,7 @@ body{
   border: 1px solid #e9fbfe;
   right: 10px;
   position: fixed;
-  border-radius: 10px;
+  border-radius: 4px;
 }
 
 .singlenote{
