@@ -1,15 +1,3 @@
-/*************************
-Splash Page Format (DELETE THIS)
-*************************/
-ul {
-	list-style: none;
-  display: none;
-}
-
-li:hover {
-  background: steelblue;
-}
-
 
 .noted {
   background: #064f5a;
