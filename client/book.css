@@ -25,12 +25,13 @@ li:hover {
 
 .note {
     position: absolute;
+}
 /*************************
 Book CSS
 *************************/
 p {
-	color: purple;
-  font-family: 'Droid Sans', sans-serif;
-  margin: auto;
-  width: 50%;
+    color: #333;
+    font-family: 'Droid Sans', sans-serif;
+    margin: 0 auto;
+    width: 50%;
 }

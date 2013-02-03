@@ -4,6 +4,7 @@ function log() {
 }
 
 Meteor.startup(function () {
+  window.history.replaceState('','','/')
   $(window).on('keydown',function (e) {
     if (e.which === 27) {
       Session.set('view', '')
@@ -20,8 +21,17 @@ Template.splash.book = function () {
   return Books.find().fetch();
 };
 
+
+Template.viewer.notes = function (a) {
+  return Books.findOne({title: Session.get('view')}).notes.map(function (d, i) {
+    d.top += i * 15
+    return d
+  })
+}
+
 Template.viewer.book = function () {
   var book = Books.findOne({title: Session.get('view')});
+  if (!book) return;
   var text = book.text;
   var result = [];
   (function iter(v,k,o) {
@@ -29,31 +39,14 @@ Template.viewer.book = function () {
     if (k === 'em') result[result.length - 1] += v[0].text.trim();
     typeof v !== 'string' && _.each(v, iter)
   })(text);
-  var notes = Notes.find({title:book.title}).fetch()
+
   result = result.map(function (d) {
-    var ugly = {
+    return {
       text: d,
       title: book.title
     }; 
-    _.each(notes, function (d) {
-      
-    })
-    return ugly;
   })
   return result;
-}
-
-Template.viewer.notes = function () {
-  var r = Notes.find({
-    title: Session.get('view')
-  });
-  return r;
-}
-
-Template.viewer.is_noted = function () {
-  return Notes.find({
-    title: Session.get('view')
-  }).fetch()
 }
 
 Template.viewer.events({
@@ -61,17 +54,18 @@ Template.viewer.events({
     e.preventDefault();
     Session.set('view','');
   },
+
   'mouseup p': function (e) {
     if (! window.getSelection().toString()) return ;
     var i = $('body').children('p').index($(e.target))
     var q = { i:i, title: this.title };
     if (e.target.className.match(/noted/)) log(Notes.findOne(q).text)
-    else Books.update({_id: this._id}, {
+    else Books.update({title: Session.get('view')}, {
       $push: {
         notes: {
           text: prompt('please enter a note'),
           title: this.title,
-          i:i
+          top: e.target.offsetTop
         }
       }
     })

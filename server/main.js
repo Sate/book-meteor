@@ -8,7 +8,9 @@ var url = "https://api.pearson.com/penguin/classics/v1/books?"
       })
     }, 1000 * 60 * 5)
 
-    Books.find().fetch().length > 1 ||  Meteor.http.get(url, function (err, result) {
+    if (! Books.find().fetch().length)
+      console.log('populating books collection') || 
+      Meteor.http.get(url, function (err, result) {
       result.data.books.forEach(function (book, i) { 
         book.text = [];
         book.notes = [];
