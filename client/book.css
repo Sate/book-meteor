@@ -42,7 +42,7 @@ ul.para {
 .about {
   background-color: #222;
   opacity: 0.9;
-  width: 750px;
+  width: 775px;
   height: 530px;
   border-radius: 5px;
   margin: auto;
@@ -111,9 +111,20 @@ ul.para {
   cursor: pointer;
 }
 
-label {
+label, span.name {
   font-size: 1.4em;
   margin-right: 10px;
+}
+.name {
+  border-radius: 3px;
+  font-size: 1.2em;
+  padding: 4px 4px 4px 9px;
+  margin: 0 auto;
+  margin-bottom: 6px;
+  text-align: center; 
+  width: 200px;
+  border: 0;
+  margin-right: 9px;
 }
 
 /***********************
