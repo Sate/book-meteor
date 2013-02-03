@@ -45,6 +45,7 @@ Splash Image
   background-color: #222;
   opacity: 0.9;
   border-radius: 5px;
+  height: 190px;
 }
 
 .about-div:nth-child(2) {
@@ -54,6 +55,7 @@ Splash Image
 .about-div p {
   margin: auto;
   max-width: 83%;
+  font-family: 'Droid Sans', sans-serif;
 }
 
 .about {
@@ -74,10 +76,6 @@ Splash Image
 
 .bold {
 	font-weight: bold;
-}
-
-.title, .about-div, .about, .container {
-  z-index: 10000;
 }
 
 @-moz-keyframes scroll{0%{-moz-transform:translate3d(0, 0, 0);
