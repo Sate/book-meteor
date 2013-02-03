@@ -180,6 +180,7 @@ Book CSS
 ************************/
 .bookContainer {
   margin-top: 25px;
+  overflow: hidden;
 }
 .noted {
   background: #333;
@@ -202,7 +203,7 @@ Book CSS
 }
 
 p {
-  padding:5px;
+  padding: 5px;
 }
 
 body {
@@ -214,22 +215,37 @@ body {
 .notebar {
   float: right;
   width: 400px;
-  height: 90%;
-  border: 1px solid #e9fbfe;
+  height: 85%;
   right: 241px;
   position: fixed;
-  border-radius: 4px;
+  background-color: #222;
 }
 
 .singlenote {
-  border-bottom: 1px solid #e9fbfe;
-  font-size: 25px;
+  font-size: 15px;
+  margin-bottom: 5px;
   padding: 10px;
+  background-color: #333;
+  border-radius: 4px;
 }
 
-*{
+.noteHead {
+  background-color: #333;
+  margin-bottom: 8px;
+  text-align: center;
+  font-size: 2.5em;
+  height: 73px;
+  border-radius: 5px;
+  padding-top: 26px;
+}
+
+* {
   -webkit-transition: 0.2s linear;
 }
+
+/******************
+Book Title CSS
+*******************/
 
 .paragraphArea div [data-pid="0"], .paragraphArea div [data-pid="31"],
 .paragraphArea div [data-pid="171"], .paragraphArea div [data-pid="137"], .paragraphArea div [data-pid="154"] {
@@ -242,6 +258,6 @@ body {
 .paragraphArea div [data-pid="1"] {
   font-size: 1.5em;
   padding: 0;
-  margin: 18px 0 25px 0;
+  margin: 18px 0 32px 0;
   font-style: italic;
 }
