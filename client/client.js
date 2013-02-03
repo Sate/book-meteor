@@ -29,7 +29,7 @@ Template.viewer.THENOTES = function(){
     // console.log(d);
     // console.log(choice);
     return d.pid == choice;
-  });
+  })
   return result;
 
 };
@@ -50,6 +50,7 @@ Template.viewer.book = function () {
         for (var i = 0; i<book.notes.length; i++){
           if (book.notes[i].pid === result.indexOf(d)){
             notes.push(book.notes[i].text)
+            console.log(notes);
           }
         }
     return {
@@ -96,8 +97,10 @@ Template.viewer.events({
   },
 
   'mouseup p': function (e) {
-    var s = window.getSelection();
-    if (! s.toString()) return ;
+    var s = window.getSelection().toString();
+    if (! s) return;
+    var from = e.target.textContent.indexOf(s.slice(0, s.length -5));
+    var to = e.target.textContent.indexOf(s.slice(s.length -5));
     var i = $('body').children('p').index($(e.target));
     var pid = $(e.target).data('pid');
     var q = { i:i, title: this.title };
@@ -109,8 +112,8 @@ Template.viewer.events({
           text: userText,
           title: this.title,
           top: e.target.offsetTop,
-          from:10,
-          to:20,
+          from: from,
+          to: to,
           color: Session.get('color'),
           user: Session.get('name') || 'student',
           pid: pid
