@@ -1,0 +1,101 @@
+<html>
+<head>
+  <style>
+  @-moz-keyframes scroll{0%{-moz-transform:translate3d(0, 0, 0);
+    transform:translate3d(0, 0, 0)}100%{-moz-transform:translate3d(0, -2160px, 0);
+    transform:translate3d(0, -2160px, 0)}}
+  @-webkit-keyframes scroll{0%{-webkit-transform:translate3d(0, 0, 0);
+    transform:translate3d(0, 0, 0)}100%{-webkit-transform:translate3d(0, -2160px, 0);
+    transform:translate3d(0, -2160px, 0)}}
+  @-o-keyframes scroll{0%{-o-transform:translate3d(0, 0, 0);
+    transform:translate3d(0, 0, 0)}100%{-o-transform:translate3d(0, -2160px, 0);
+    transform:translate3d(0, -2160px, 0)}}
+  @-ms-keyframes scroll{0%{-ms-transform:translate3d(0, 0, 0);
+    transform:translate3d(0, 0, 0)}100%{-ms-transform:translate3d(0, -2160px, 0);
+    transform:translate3d(0, -2160px, 0)}}
+  @keyframes scroll{0%{transform:translate3d(0, 0, 0)}100%{transform:translate3d(0, -2160px, 0)}}
+  .books{
+    background:url(public/scroll.jpg)repeat 0 0;
+    width: 5059px;
+    height: 800px;
+  }
+
+  #main{
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    -webkit-perspective: 800px;
+  }
+  .books-main{
+    margin-left: -2530px;
+    -webkit-transform-origin: 50% 0%;
+    position: absolute;
+    width: 5059px;
+    -webkit-transform: rotateX(-38deg) translate3d(0, -173px, -400px);
+  }
+  .books-wrapper{
+    position: relative;
+    -webkit-animation: scroll 45s linear infinite;
+  }
+  .books:nth-child(1){
+    background-position: 1012px 0px; 
+  }
+  .books:nth-child(2){
+    background-position: 2024px 0px; 
+  }
+  .books:nth-child(3){
+    background-position: 3036px 0px; 
+  }
+  .books:nth-child(4){
+    background-position: 4048px 0px; 
+  }
+  .books:nth-child(5){
+    background-position: 5060px 0px; 
+  }
+  .books:nth-child(6){
+    background-position: 6072px 0px; 
+  }
+  .books:nth-child(7){
+    background-position: 7084px 0px; 
+  }
+  .books:nth-child(8){
+    background-position: 8096px 0px; 
+  }
+
+  .books-fade{
+    position: absolute;
+  width: 100%;
+  height: 100%;
+  background:-webkit-gradient(linear, 0% 0%, 50% 100%, color-stop(0%, rgba(0,0,0,0.9)), color-stop(95%, rgba(0,0,0,0)), color-stop(100%, rgba(0,0,0,0.5)));
+  }
+
+
+
+
+  </style>
+</head>
+<body>
+<div id="main">
+  <div class="books-main">
+    <div class="books-wrapper">
+      <div class="books"></div>
+      <div class="books"></div>
+      <div class="books"></div>
+      <div class="books"></div>
+      <div class="books"></div>
+      <div class="books"></div>
+      <div class="books"></div>
+      <div class="books"></div>
+    </div>
+  </div>
+  <div class="books-fade"></div>
+</div>
+
+
+
+
+</body>
+</html>
