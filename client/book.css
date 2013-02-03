@@ -1,5 +1,5 @@
 /*************************
-Splash Page Format
+Splash Page Format (DELETE THIS)
 *************************/
 ul {
 	list-style: none;
@@ -22,26 +22,31 @@ li:hover {
 .note {
     position: relative;
 }
+
+
 /*************************
-Splash Image
+ Titles CSS
 *************************/
-.scroll {
-  height: 500px;
+.title {
+}
+
+.subtitle, h1, h2 {
+  color: #FFF;
+  font-family: 'Droid Sans', sans-serif;
+}
+
+.bold {
+  font-weight: bold;
 }
 
 /*************************
-Splash Image
+ About Format, CSS
 *************************/
-
-.subtitle {
-	color: #FFF;
-	font-family: 'Droid Sans', sans-serif;
-}
 
 .about-div {
-	text-align: center;
-	width: 400px;
-	float: left;
+  text-align: center;
+  width: 400px;
+  float: left;
   background-color: #222;
   opacity: 0.9;
   border-radius: 5px;
@@ -59,24 +64,28 @@ Splash Image
 }
 
 .about {
-	overflow: hidden;
-	width: 820px;
-	margin: auto;
-  margin-top: 36%;
-	text-align: center;
+  overflow: hidden;
+  width: 820px;
+  margin: auto;
+  margin-top: 29%;
+  text-align: center;
+  box-shadow: 0 0 5px #000;
 }
 
 .container {
   position: fixed;
   color: #FFF;
   margin: 0 auto;
-	text-align: center;
+  text-align: center;
   width: 100%;
   height: 100%;
 }
 
-.bold {
-	font-weight: bold;
+/***********************
+ Scrolling Image CSS
+************************/
+.scroll {
+  height: 500px;
 }
 
 @-moz-keyframes scroll{0%{-moz-transform:translate3d(0, 0, 0);
