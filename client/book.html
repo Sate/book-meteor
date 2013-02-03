@@ -62,18 +62,20 @@
 
 <template name="viewer">
   <a href="/"><button class="button2">Back Home</button></a>
-    <div class="paragraphArea">
-      {{#each book}}
-      <div>
-        {{#constant}}
-        <p data-pid={{pid}}>{{text}}</p>
-        {{/constant}}
+    <div class="bookContainer">
+      <div class="paragraphArea">
+        {{#each book}}
+        <div>
+          {{#constant}}
+          <p data-pid={{pid}}>{{text}}</p>
+          {{/constant}}
+        </div>
+        {{/each}}
       </div>
-      {{/each}}
-    </div>
-    <div class="notebar">
-      {{#each THENOTES}}
-       <div class="singlenote">{{text}}-by Student1</div>
-      {{/each}}
-    </div>
+      <div class="notebar">
+        {{#each THENOTES}}
+         <div class="singlenote">{{text}}-by Student1</div>
+        {{/each}}
+      </div>
+    </div> <!--bookContainer div -->
 </template>

@@ -193,8 +193,8 @@ Book CSS
 
 /***********************************************/
 .paragraphArea{
-  max-width: 50%;
-  margin-left: 5%;
+  max-width: 500px;
+  margin-left: 13%;
   float: left;
 }
 
@@ -210,10 +210,10 @@ body{
 
 .notebar{
   float: right;
-  width: 40%;
+  width: 400px;
   height: 90%;
   border: 1px solid #e9fbfe;
-  right: 10px;
+  right: 241px;
   position: fixed;
   border-radius: 4px;
 }
