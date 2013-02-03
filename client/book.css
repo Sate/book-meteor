@@ -24,7 +24,7 @@ li:hover {
  Titles CSS
 *************************/
 .title {
-  font-size: 3.5em;
+  font-size: 4.3em;
   text-shadow: 2px 2px 2px #222;
   font-family: 'Droid Sans', sans-serif;
   margin: 0;
@@ -32,6 +32,7 @@ li:hover {
 }
 
 h2 {
+  font-size: 2em;
   text-shadow: 2px 2px 2px #222;
   font-family: 'Droid Sans', sans-serif;
   font-weight: 100;
@@ -43,12 +44,9 @@ h2 {
   font-family: 'Droid Sans', sans-serif;
 }
 
-.bold {
-  font-weight: bold;
-}
-
 .para {
   max-width: 100%;
+  font-size: 1.3em;
 }
 
 /*************************
@@ -56,7 +54,7 @@ h2 {
 *************************/
 
 .pick {
- width: 200px;
+ width: 250px;
  padding: 5px;
  font-size: 16px;
  line-height: 1;
@@ -65,14 +63,23 @@ h2 {
  height: 34px;
 }
 
+.psize {
+  height: 3px;
+  font-size: 1.5em;
+  margin: 10px 0 23px 0;
+}
+
 .button {
   border: 2px solid #3990bb;
   font-size: 1.15em;
   border-radius: 5px;
   padding: 8px 20px;
   margin: 5px 10px 0 0;
-  opacity: 1;
   background-color: #fff;
+}
+
+label {
+  font-size: 1.4em;
 }
 
 .action {
@@ -81,17 +88,11 @@ h2 {
   display: inline;
 }
 
-.action p {
-  max-width: none;
-  width: 180px;
-  margin: 0;
-}
-
 .about {
   background-color: #222;
   opacity: 0.9;
   width: 750px;
-  height: 400px;
+  height: 425px;
   border-radius: 5px;
   margin: auto;
   margin-top: 9%;
