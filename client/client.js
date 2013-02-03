@@ -21,6 +21,17 @@ Template.splash.book = function () {
   return Books.find().fetch();
 };
 
+Template.viewer.THENOTES = function(){
+  var choice = Session.get('p');
+  var notes = Books.findOne({title: Session.get('view')}).notes;
+  var result = notes.filter(function(d){
+    // console.log(d);
+    // console.log(choice);
+    return d.pid == choice;
+  });
+  return result;
+
+};
 
 Template.viewer.book = function () {
   var book = Books.findOne({title: Session.get('view')});
@@ -56,16 +67,25 @@ Template.viewer.events({
     Session.set('view','');
   },
 
+  'mouseenter p': function(e){
+    Session.set('p', ''+$(e.target).data('pid'));
+    $('.noted').removeClass('noted');
+    Meteor.setTimeout(function(){
+      $(e.target).addClass('noted');
+    }, 50);
+  },
+
   'mouseup p': function (e) {
     if (! window.getSelection().toString()) return ;
     var i = $('body').children('p').index($(e.target));
     var pid = $(e.target).data('pid');
     var q = { i:i, title: this.title };
-    if (e.target.className.match(/noted/)) log(Notes.findOne(q).text)
-    else Books.update({title: Session.get('view')}, {
+    var userText = prompt('Leave a note');
+    if (!userText){return}
+    Books.update({title: Session.get('view')}, {
       $push: {
         notes: {
-          text: prompt('please enter a note'),
+          text: userText,
           title: this.title,
           top: e.target.offsetTop,
           pid: pid
