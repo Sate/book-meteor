@@ -1,3 +1,5 @@
+Meteor.absoluteUrl('home', {rootUrl: 'http://bookcrumb-marx.dotcloud.com'});
+
 var url = "https://api.pearson.com/penguin/classics/v1/books?"
       + "apikey=d5df23ffde529d41f3418a80ec6eca25&limit=100"
   Meteor.startup(function () {
