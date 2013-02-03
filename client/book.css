@@ -135,17 +135,10 @@ Splash Image
 /*************************
 Book CSS
 *************************/
-p.test {
-<<<<<<< HEAD
-	color: purple;
-  font-family: 'Droid Sans', sans-serif;
-  margin: auto;
-  width: 98%;
-  background-color: blue;
-=======
-    color: #333;
+  p.test {
+  	color: purple;
     font-family: 'Droid Sans', sans-serif;
-    margin: 0 auto;
-    width: 50%;
->>>>>>> f4ab01cb6959d3a4c934889facffc8d0d26e7c95
-}
+    margin: auto;
+    width: 98%;
+    background-color: blue;
+  }
