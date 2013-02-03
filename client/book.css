@@ -40,6 +40,7 @@ ul.para {
  Main Blurb, CSS
 *************************/
 .about {
+  text-align: center;
   background-color: #222;
   opacity: 0.9;
   width: 775px;
@@ -83,7 +84,7 @@ ul.para {
 .psize {
   height: 3px;
   font-size: 1.5em;
-  margin: 10px 0 23px 0;
+  margin: 10px 30px 23px 0;
 }
 
 .button {
