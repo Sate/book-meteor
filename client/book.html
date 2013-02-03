@@ -25,7 +25,6 @@
 </div>
 </template>
 
-
 <template name="splashPage">
   <div class="container">
     <div class="about">
@@ -87,7 +86,9 @@
       <div class="notebar">
         <div class="noteHead"><strong>Moby Dick</strong> notes</div>
         {{#each THENOTES}}
-         <div class="singlenote">{{text}}-by Student1</div>
+         <div class="singlenote" style="color:{{color}}">
+           {{text}}-by {{user}}
+         </div>
         {{/each}}
       </div>
     </div> <!--bookContainer div -->
