@@ -27,12 +27,6 @@ h2 {
   padding: 0;
 }
 
-.para2 {
-  font-size: 0.5em;
-  height: 15px;
-/*  display: none;
-*/}
-
 .para li:first-child {
   font-size: 1.3em;
   margin-bottom: 20px;
