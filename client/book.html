@@ -65,13 +65,22 @@
 
 <template name="viewer">
   <a href="/">Click here to go back</a>
-
-    {{#each book}}
-    <div>
-
-      <p {{#if is_noted}} class="noted" {{/if}} data-pid={{pid}}>{{text}}</p>
-      <span>{{notes}}</span>
+    <div class="paragraphArea">
+      {{#each book}}
+      <div>
+        {{#constant}}
+        <p data-pid={{pid}}>{{text}}</p>
+        {{/constant}}
+      </div>
+      {{/each}}
     </div>
-    {{/each}}
-  
+    <div class="notebar">
+      {{#each THENOTES}}
+       <div class="singlenote">{{text}}-by Student1</div>
+      {{/each}}
+    </div>
 </template>
+
+
+
+  
