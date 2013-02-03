@@ -1,27 +1,5 @@
 /*************************
-Splash Page Format (DELETE THIS)
-*************************/
-ul {
-	list-style: none;
-  display: none;
-}
-
-li:hover {
-  background: steelblue;
-}
-
-
-.noted {
-  background: #064f5a;
-}
-
-.note {
-    position: relative;
-}
-
-
-/*************************
- Titles CSS
+ Headers CSS
 *************************/
 .title {
   font-size: 4.3em;
@@ -50,8 +28,37 @@ h2 {
 }
 
 /*************************
- About Format, CSS
+ Main Blurb, CSS
 *************************/
+.about {
+  background-color: #222;
+  opacity: 0.9;
+  width: 750px;
+  height: 425px;
+  border-radius: 5px;
+  margin: auto;
+  margin-top: 9%;
+  text-align: center;
+  box-shadow: 0 0 5px #000;
+  font-family: 'Droid Sans', sans-serif;
+}
+
+.container {
+  position: fixed;
+  color: #FFF;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+}
+
+/*************************
+ Pick a book CSS
+*************************/
+.action {
+  width: 600px;
+  margin: 0;
+  display: inline;
+}
 
 .pick {
  width: 250px;
@@ -80,33 +87,6 @@ h2 {
 
 label {
   font-size: 1.4em;
-}
-
-.action {
-  width: 600px;
-  margin: 0;
-  display: inline;
-}
-
-.about {
-  background-color: #222;
-  opacity: 0.9;
-  width: 750px;
-  height: 425px;
-  border-radius: 5px;
-  margin: auto;
-  margin-top: 9%;
-  text-align: center;
-  box-shadow: 0 0 5px #000;
-  font-family: 'Droid Sans', sans-serif;
-}
-
-.container {
-  position: fixed;
-  color: #FFF;
-  margin: 0 auto;
-  width: 100%;
-  height: 100%;
 }
 
 /***********************
@@ -182,10 +162,10 @@ label {
   }
 
   .books-fade{
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: -webkit-gradient(linear, 53% 1%, 51% 101%, color-stop(0%, rgba(0,0,0,0.2)), color-stop(93%, rgba(0,0,0,0)), color-stop(100%, rgba(0,0,0,0.7)));
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: -webkit-gradient(linear, 53% 1%, 51% 101%, color-stop(0%, rgba(0,0,0,0.2)), color-stop(93%, rgba(0,0,0,0)), color-stop(100%, rgba(0,0,0,0.7)));
   }
 /*************************
 Book CSS
