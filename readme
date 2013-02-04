@@ -1,1 +1,6 @@
-hey this is an app we made at a daytime hackathon
+++Bookcrumbs App
+
+We have solved the problem of 'Now we're gona discuss what we've read' for online classes. 
+When you want to discuss sections of a reading with large amounts of people, Bookcrumbs facilitates that.
+
+Bookcrumbs is an app that pulls in Penguin Classic's Best 100 novels from Pearson's API and allows users to collaboratively leave notes anywhere on the book in real-time.
