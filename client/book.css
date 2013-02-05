@@ -92,7 +92,7 @@ ul.para {
   font-size: 1.15em;
   border-radius: 5px;
   padding: 8px 20px;
-  margin: 5px 10px 0 0;
+  margin: 10px 10px 0 0;
   background-color: #fff;
 }
 
@@ -104,6 +104,10 @@ ul.para {
   font-weight: bold;
   background-color: #fff;
   color: #333;
+}
+
+.button:hover {
+  cursor: pointer;
 }
 
 .button2:hover {
