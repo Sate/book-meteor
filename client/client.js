@@ -121,6 +121,7 @@ Template.viewer.events({
     var pid = $(e.target).data('pid');
     var q = { i:i, title: this.title };
     var userText = prompt('Leave a note');
+    // $('<textarea style="left:'+e.pageX+'px; top:'+e.pageY+'px; position:absolute;"></textarea>').appendTo('body');
     if (!userText){return}
     Books.update({title: Session.get('view')}, {
       $push: {
