@@ -88,19 +88,35 @@ Template.viewer.events({
     Session.set('view','');
   },
 
+  'mouseenter div.singlenote': function(e){
+    var textnode = $(".noted").contents().filter(function() {
+      return this.nodeType == 3;
+    })[0];
+    var t = window.getSelection();
+    var range = document.createRange();
+    range.setStart(textnode, this.from);
+    range.setEnd(textnode, this.to);
+    t.removeAllRanges();
+    t.addRange(range);
+    var css = document.createElement("style");
+    css.type = "text/css";
+    css.innerHTML = "p::selection { background:"+this.color+" }";
+    document.body.appendChild(css);
+  },
+
   'mouseenter p': function(e){
     Session.set('p', ''+$(e.target).data('pid'));
     $('.noted').removeClass('noted');
     Meteor.setTimeout(function(){
       $(e.target).addClass('noted');
-    }, 50);
+    }, 0);
   },
 
   'mouseup p': function (e) {
     var s = window.getSelection().toString();
     if (! s) return;
-    var from = e.target.textContent.indexOf(s.slice(0, s.length -5));
-    var to = e.target.textContent.indexOf(s.slice(s.length -5));
+    var from = window.getSelection().getRangeAt(0).startOffset;
+    var to = window.getSelection().getRangeAt(0).endOffset;
     var i = $('body').children('p').index($(e.target));
     var pid = $(e.target).data('pid');
     var q = { i:i, title: this.title };

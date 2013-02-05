@@ -170,7 +170,8 @@ label, span.name {
     position: absolute;
     width: 5059px;
     -webkit-transform: rotateX(38deg) translate3d(0, -173px, -400px);
-  }
+/*    -webkit-transform: rotateX(38deg) translate3d(0, -773px, -400px);
+*/  }
   .books-wrapper{
     position: relative;
     -webkit-animation: scroll 70s linear infinite;
